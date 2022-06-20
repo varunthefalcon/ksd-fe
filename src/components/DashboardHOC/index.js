@@ -11,13 +11,13 @@ const DashboardHOC = () => {
             <Sidebar />
             <main className='full-width'>
                 <Header />
-                <content>
+                <div className='p-15 pr-30'>
                     <Routes>
-                        <Route index element={<Dashboard />} />
+                        <Route path="home" element={<Dashboard />} />
                         <Route path="customers" element={<Customers />} />
-                        <Route path="staff" element={<Staffs />} />
+                        <Route path="staffs" element={<Staffs />} />
                     </Routes>
-                </content>
+                </div>
             </main>
         </div>
     </>
