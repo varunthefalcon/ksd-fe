@@ -5,6 +5,8 @@ import Header from '../header'
 import Customers from '../../pages/customers'
 import Staffs from '../../pages/staff'
 import Vehicles from '../../pages/vehicles'
+import Invoices from '../../pages/invoices'
+import Oops404 from '../../pages/404'
 
 
 const DashboardHOC = () => {
@@ -19,6 +21,8 @@ const DashboardHOC = () => {
                         <Route path="customers" element={<Customers />} />
                         <Route path="staffs" element={<Staffs />} />
                         <Route path="vehicles" element={<Vehicles />} />
+                        <Route path="invoices" element={<Invoices />} />
+                        <Route path="*" element={<Oops404 />} />
                     </Routes>
                 </div>
             </main>
