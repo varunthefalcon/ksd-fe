@@ -1,0 +1,14 @@
+@import './variables';
+
+.sidebar-container {
+    width: $sidebar-width;
+    height: 100vh;
+    background-color: #ffcfdf;
+    background-image: linear-gradient(105deg, #ffcfdf 0%, #b0f3f1 74%);
+}
+
+.sidebar-items {
+    div {
+        padding: 10px 20px;
+    }
+}

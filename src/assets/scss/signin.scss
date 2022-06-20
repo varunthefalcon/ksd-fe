@@ -1,0 +1,13 @@
+.center-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  .logo {
+    margin: 20px;
+  }
+}
+
+.height-70 {
+  height: 70%;
+}
