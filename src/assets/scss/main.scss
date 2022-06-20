@@ -1,6 +1,10 @@
   @import '~antd/dist/antd.css';
   @import './variables';
 
+  *p {
+    margin: 0
+  }
+
   body {
     font-family: 'Roboto', sans-serif;
   }
@@ -29,4 +33,10 @@
 
   .mb-30 {
     margin-bottom: 30px;
+  }
+
+  .align-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
