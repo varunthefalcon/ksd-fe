@@ -16,7 +16,7 @@ const SignIn = () => {
 
     return <div className="center-container gradient-bg full-height">
         <div className='center-container'>
-            <img src={Logo} alt="logo" className='mb-30' />
+            <img src={Logo} alt="logo" width="200px" className='mb-30' />
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} >

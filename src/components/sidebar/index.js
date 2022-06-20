@@ -1,5 +1,5 @@
 import '../../assets/scss/sidebar.scss'
-import logo from '../../assets/media/logo-2.png'
+import logo from '../../assets/media/logo.png'
 import { Link, useLocation } from 'react-router-dom'
 import { FaHome, FaUsers, FaCar, FaFileInvoiceDollar, FaUserClock, FaSignOutAlt } from 'react-icons/fa';
 import { GiMechanicGarage } from 'react-icons/gi'
