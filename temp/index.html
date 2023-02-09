@@ -39,7 +39,6 @@
             <img src="./UploadBtn.png" alt="uploadBtn" id="uploadBtn" />
             <span id="fileNameLabel"></span>
             <p style="cursor: pointer;font-weight: bold;margin-left: 5px;" id="clearBtn">CLEAR</p>
-            <p id="progress"></p>
             <!-- accept="video/mp4,video/x-m4v,video/*"  -->
         </div>
     </div>
@@ -49,7 +48,7 @@
         function upload() {
             let fileElem = document.getElementById("fileInput");
             let clearBtn = document.getElementById("clearBtn")
-            let progress = document.getElementById("progress");
+            const uploadElem = document.getElementById("uploadBtn");
 
             const url = 'https://script.google.com/macros/s/AKfycbzftveufAE3JqY1wziUnKkqduGIyARkG0QzQrDR4mNZMuRxrJgToh0sZe_zekN_GMm4/exec?varun=1'
 
@@ -63,7 +62,7 @@
                 var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
 
                 clearBtn.style.display = 'none'
-                progress.innerHTML = 'Uploading....'
+                uploadElem.src = "./UploadingBtn.png"
 
                 fetch(url, //your AppsScript URL
                     { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
@@ -92,7 +91,6 @@
             let span = document.getElementById("fileNameLabel")
             let clearBtn = document.getElementById("clearBtn")
             const uploadElem = document.getElementById("uploadBtn");
-            let progress = document.getElementById("progress");
 
 
             if (fileElem.files && fileElem.files[0]) {
@@ -107,8 +105,8 @@
             } else {
                 span.style.display = 'none'
                 clearBtn.style.display = 'none'
-                progress.innerHTML = ''
                 uploadElem.style.display = 'none'
+                uploadElem.src = './UploadBtn.png'
                 fileElem.style.display = 'block'
             }
         }
